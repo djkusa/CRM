@@ -169,7 +169,8 @@ const PropertiesDetails = (props) => {
                 justifyContent: "center",
                 marginTop: 20,
               }}
-            >
+            > 
+            {/* chan */}
               <View
                 style={{
                   height: 250,
