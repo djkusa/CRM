@@ -263,8 +263,10 @@ const Properties = () => {
                 <TouchableOpacity
                   activeOpacity={1}
                   onPress={() =>
-                    navigation.navigate("PropertiesDetails", { id: item.id })
+                    {
+                  navigation.navigate("PropertiesDetails", { id: item.id }) 
                   }
+                }
                   style={{
                     height: 300,
                     margin: "2.5%",
@@ -305,7 +307,7 @@ const Properties = () => {
                         fontWeight: "bold",
                       }}
                     >
-                      {item.title}
+                      {item.title} 
                     </Text>
                     <Text
                       style={{

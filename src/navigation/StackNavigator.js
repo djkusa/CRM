@@ -33,6 +33,7 @@ import TransactionDesk from "../container/TransactionDesk/TransactionDesk";
 import Favorites from "../container/SurfStats/Favorites";
 import SavedSearch from "../container/SurfStats/SavedSearch";
 import SearchCreteria from "../container/SurfStats/SearchCreteria";
+import PropertyDetailWeb from "../container/Properties/PropertyDetailWeb";
 const Stack = createStackNavigator();
 
 function StackNavigator() {
@@ -82,6 +83,8 @@ function StackNavigator() {
       />
       
       <Stack.Screen name="PropertiesViewed" component={PropertiesViewed} options={{headerShown:false}}/>
+      <Stack.Screen name="PropertyDetailWeb" component={PropertyDetailWeb} options={{headerShown:false}}/>
+
       <Stack.Screen name="Favorites" component={Favorites} options={{headerShown:false}}/>
       <Stack.Screen name="SavedSearch" component={SavedSearch} options={{headerShown:false}}/>
       <Stack.Screen name="SearchCreteria" component={SearchCreteria} options={{headerShown:false}}/>

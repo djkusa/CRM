@@ -8,9 +8,11 @@ import {
   ScrollView,
   Linking,
   SafeAreaView,
+  Platform,
 } from "react-native";
+
+
 import "react-native-gesture-handler";
-// import MapView, { PROVIDER_GOOGLE, Marker } from "react-native-maps";
 import Header from "../../components/Header";
 import Colors from "../../utils/Colors";
 import { TextInput } from "react-native-gesture-handler";
@@ -19,9 +21,15 @@ import { useNavigation } from "@react-navigation/native";
 import { getPropertiesDetails } from "../../modules/getPropertiesDetails";
 import { useSelector, useDispatch } from "react-redux";
 import Activity from "../../components/Activity";
-// import MapWebView from "../../modules/webview";
+  import "react-native-gesture-handler";
+
+import MapView, { PROVIDER_GOOGLE, Marker } from "react-native-maps";
 
 const PropertiesDetails = (props) => {
+  // var MapView = require('react-native-maps');
+  // var Marker = require('react-native-maps');
+  // var PROVIDER_GOOGLE = require('react-native-maps');
+
   const navigation = useNavigation();
   const id = props.route.params.id;
   const dispatch = useDispatch();
@@ -157,11 +165,10 @@ const PropertiesDetails = (props) => {
                     marginTop: 10,
                   }}
                 >
-                  $ {data.originallistprice}
+                  $ {data.originallistprice} 
                 </Text>
               </View>
             </View>
-
             <TouchableOpacity
               activeOpacity={1}
               onPress={() => goToMap()}
@@ -170,37 +177,27 @@ const PropertiesDetails = (props) => {
                 marginTop: 20,
               }}
             >
-              <View
-                style={{
-                  height: 250,
-                  width: "100%",
-                }}
-              >
-                {/* <MapWebView
-                  latitude={data.property_latitude}
-                  longitude={data.property_longitude}
-                /> */}
-              </View>
-              {/* <MapView
+             
+              <MapView
                 provider={PROVIDER_GOOGLE}
                 style={{
                   height: 250,
                   width: "100%",
                 }}
                 region={{
-                  latitude: parseFloat(data.property_latitude),
-                  longitude: parseFloat(data.property_longitude),
+                  latitude: data.property_latitude ? parseFloat(data.property_latitude) :   parseFloat(30.7046),
+                  longitude: data.property_longitude ? parseFloat(data.property_longitude) : parseFloat(76.7179),
                   latitudeDelta: 0.015,
                   longitudeDelta: 0.0121,
                 }}
               >
                 <Marker
                   coordinate={{
-                    latitude: parseFloat(data.property_latitude),
-                    longitude: parseFloat(data.property_longitude),
+                    latitude: data.property_latitude ? parseFloat(data.property_latitude) :   parseFloat(30.7046),
+                    longitude: data.property_longitude ? parseFloat(data.property_longitude) : parseFloat(76.7179),
                   }}
                 />
-              </MapView> */}
+              </MapView>
             </TouchableOpacity>
             <View
               style={{
