@@ -170,7 +170,7 @@ const PropertiesDetails = (props) => {
                 marginTop: 20,
               }}
             > 
-            {/* chan */}
+            {/* chanhhh */}
               <View
                 style={{
                   height: 250,
