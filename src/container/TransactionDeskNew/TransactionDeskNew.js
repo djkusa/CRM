@@ -34,7 +34,9 @@ const TransactionDeskNew = () => {
   return (
     <SafeAreaView style={{ flex: 1, height: "100%" }}>
       <View style={styles.topcoverupper}>
-        <TouchableOpacity onPress={() => navigation.navigate("Contact")} style={[styles.backiconcover, { paddingLeft: 10 }]}>
+        <TouchableOpacity onPress={() => 
+          navigation.navigate("Contact")
+          } style={[styles.backiconcover, { paddingLeft: 10 }]}>
           <Image
             style={[styles.backimage, { tintColor: Colors.white }]}
             source={require("../../../assets/back.png")}
@@ -51,7 +53,9 @@ const TransactionDeskNew = () => {
         <TouchableOpacity
           style={styles.plusiconcover}
           onPress={()=>{
-            navigation.navigate("TransactionDesk")
+            // navigation.navigate("TransactionDesk")
+            navigation.navigate('TrasactionForm')
+
           }}
         >
           <Image style={styles.plusimage}
@@ -132,7 +136,8 @@ const TransactionDeskNew = () => {
         </View>
         <View style={{ paddingHorizontal: 12, paddingVertical: 22, flexDirection: "row", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap" }}>
           <View style={styles.maincoverbox(width / 2 - 16)}>
-            <TouchableOpacity style={{ position: "absolute", top: 8, right: 8 }}>
+            <TouchableOpacity style={{ position: "absolute", top: 8, right: 8 }} onPress={()=>{
+            }}>
               <View style={styles.greencover}>
                 <Image style={styles.greenimage}
                   source={require("../../../assets/greenok.png")}
