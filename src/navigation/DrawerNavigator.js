@@ -240,6 +240,7 @@ const CustomDrawerContent = () => {
   };
   useEffect(() => {
     getData();
+    // test
   }, []);
   const getData = async () => {
     const userDetails = await AsyncStorage.getItem("userDetails");
