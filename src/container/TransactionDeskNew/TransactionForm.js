@@ -240,13 +240,13 @@ const TrasactionForm = () => {
             <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginTop: 10 }}>
                 <Text style={{ fontSize: 14, color: Colors.black, textAlign: 'center' }}>Import Fields from MLS  </Text>
                 <Image style={{ width: 14, height: 14 }} source={require('../../assets/images/account.png')}></Image>
-                
+
 
             </View>
             <SectionList
-                style={{ padding: 16}}
+                style={{ padding: 16 }}
                 sections={DATA}
-                ListFooterComponent={<View style={{height:120}}></View>}
+                ListFooterComponent={<View style={{ height: 120 }}></View>}
                 keyExtractor={(item, index) => item + index}
                 renderItem={({ item, index }) => (
                     <TouchableOpacity onPress={() => {
@@ -388,42 +388,42 @@ const TrasactionForm = () => {
                             }
 
 
-                            <Image style={{ width: 16, height: 16,padding:-3 }} source={(item ==='Seller' || 
-                            item === 'Buyer'||
-                             item==="Escrow Agent" ||
-                             item === 'Included Personal Items' ||
-                             item === 'Excluded Personal Items' ||
-                             item === 'Property subject to a lease' ||
-                             item === 'Designation of Title Co.' ||
-                             item === 'Home Warranty' ||
-                             item === 'Special Assessments' ||
-                             item === 'Attach addenda' ||
-                             item === 'Additional terms' ||
-                             item === 'Sales Associate (Buyers Agent)' ||
-                             item === 'Sales Associate Broker' || 
-                             item === 'Listing Associate (Sellers Agent)' || 
-                             item === 'Listing Broker' ||
-                             item === 'Mortage Company' ||
-                             item === 'Title Company' ||
-                             item === 'Appraiser' ||
-                             item === 'Inspector' ||
-                             item ==='Buyers Attorney' ||
-                             item === 'Sellers Attoreny' ||
-                             item === 'Surf Lokal Coordinator'? require('../../assets/images/addDoc.png')  : 
-                             item === 'Property Address' ? require('../../assets/images/pencil.png') :
-                             item === 'County' ? require('../../assets/images/pencil.png') :
-                             item === 'Tax ID #' ? require('../../assets/images/pencil.png') :
-                             item === 'Legal Description' ? require('../../assets/images/pencil.png') :
-                             item === 'Purchase Price' ? require('../../assets/images/docDoller.png') :
-                             item === 'Financing' ? require('../../assets/images/docDoller.png') :
-                             item === 'Seller Closing Contribution' ? require('../../assets/images/docDoller.png') :
-                             item === 'Escrow Deposit' ? require('../../assets/images/calenderMoney.png') :
-                             item === 'Offer Acceptance' ? require('../../assets/images/calenderTime.png') :
-                             item === 'Closing Date' ? require('../../assets/images/calenderTime.png') :
-                             item === 'Title Evidence & Insurance' ? require('../../assets/images/calenderTime.png') :
-                             item === 'Inspection Due Date' ? require('../../assets/images/calenderTime.png') :
-                             item === 'Walk-through Date' ? require('../../assets/images/calenderTime.png') :
-                             require('../../assets/images/account.png'))}></Image>
+                            <Image style={{ width: 16, height: 16, padding: -3 }} source={(item === 'Seller' ||
+                                item === 'Buyer' ||
+                                item === "Escrow Agent" ||
+                                item === 'Included Personal Items' ||
+                                item === 'Excluded Personal Items' ||
+                                item === 'Property subject to a lease' ||
+                                item === 'Designation of Title Co.' ||
+                                item === 'Home Warranty' ||
+                                item === 'Special Assessments' ||
+                                item === 'Attach addenda' ||
+                                item === 'Additional terms' ||
+                                item === 'Sales Associate (Buyers Agent)' ||
+                                item === 'Sales Associate Broker' ||
+                                item === 'Listing Associate (Sellers Agent)' ||
+                                item === 'Listing Broker' ||
+                                item === 'Mortage Company' ||
+                                item === 'Title Company' ||
+                                item === 'Appraiser' ||
+                                item === 'Inspector' ||
+                                item === 'Buyers Attorney' ||
+                                item === 'Sellers Attoreny' ||
+                                item === 'Surf Lokal Coordinator' ? require('../../assets/images/addDoc.png') :
+                                item === 'Property Address' ? require('../../assets/images/pencil.png') :
+                                    item === 'County' ? require('../../assets/images/pencil.png') :
+                                        item === 'Tax ID #' ? require('../../assets/images/pencil.png') :
+                                            item === 'Legal Description' ? require('../../assets/images/pencil.png') :
+                                                item === 'Purchase Price' ? require('../../assets/images/docDoller.png') :
+                                                    item === 'Financing' ? require('../../assets/images/docDoller.png') :
+                                                        item === 'Seller Closing Contribution' ? require('../../assets/images/docDoller.png') :
+                                                            item === 'Escrow Deposit' ? require('../../assets/images/calenderMoney.png') :
+                                                                item === 'Offer Acceptance' ? require('../../assets/images/calenderTime.png') :
+                                                                    item === 'Closing Date' ? require('../../assets/images/calenderTime.png') :
+                                                                        item === 'Title Evidence & Insurance' ? require('../../assets/images/calenderTime.png') :
+                                                                            item === 'Inspection Due Date' ? require('../../assets/images/calenderTime.png') :
+                                                                                item === 'Walk-through Date' ? require('../../assets/images/calenderTime.png') :
+                                                                                    require('../../assets/images/account.png'))}></Image>
                         </View>
                     </TouchableOpacity>
 

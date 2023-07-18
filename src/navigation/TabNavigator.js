@@ -34,6 +34,11 @@ import EditClientsDetails from "../container/EditClientsDetails/EditClientsDetai
 import chat from "../container/chat";
 import TrasactionForm from "../container/TransactionDeskNew/TransactionForm";
 import AddContacts from "../container/AddContacts/AddContacts";
+import Scripts from "../components/Scripts";
+import Realtor from "../components/Realtor";
+import CallCenterWeb from "../container/CallCenterWeb/index";
+
+
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -106,7 +111,7 @@ const BottomTabNavigator = () => {
       />
       <Tab.Screen
         name="TransactionDeskNew"
-        component={TransactionStackScreen}
+        component={TransactionDeskNew}
         options={{
           tabBarLabel: (
             <Text style={{ fontSize: 11 }} allowFontScaling={false}>
