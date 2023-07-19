@@ -17,6 +17,7 @@ import {
   SafeAreaView,
   StyleSheet,
   TouchableHighlight,
+  Platform,
 } from "react-native";
 import Images from "../utils/Images";
 import Fonts from "../utils/Fonts";
@@ -314,7 +315,7 @@ const CustomDrawerContent = () => {
           >
             {userData.display_name}
           </Text></TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('Settings')}>
+        <TouchableOpacity onPress={() => {Platform.OS === 'web' ? navigation.navigate('Settings') : null}}>
           <Image
               source={require("../../assets/setting-icons.png")}
               style={{

@@ -35,6 +35,7 @@ import Favorites from "../container/SurfStats/Favorites";
 import SavedSearch from "../container/SurfStats/SavedSearch";
 import SearchCreteria from "../container/SurfStats/SearchCreteria";
 import CallCenterWeb from "../container/CallCenterWeb";
+import ActionPlans from "../container/Settings/ActionPlans";
 const Stack = createStackNavigator();
 
 function StackNavigator() {
@@ -44,7 +45,7 @@ function StackNavigator() {
         cardStyle: { backgroundColor: Colors.PrimaryColor },
       }}
       options={{headerShown:false}}
-
+      initialRouteName="ActionPlans"
     >
       <Stack.Screen name="Login" component={Login}  options={{headerShown:false}}/>
       <Stack.Screen name="AccessRequest" component={AccessRequest} options={{headerShown:false}}/>
@@ -92,6 +93,7 @@ function StackNavigator() {
       <Stack.Screen name="TransactionDesk" component={TransactionDesk} options={{headerShown:false}}/>
       <Stack.Screen name="SurfStats" component={SurfStats} options={{headerShown:false}}/>
       <Stack.Screen name="CallCenterWeb" component={CallCenterWeb} options={{headerShown:false}}/>
+      <Stack.Screen name="ActionPlans" component={ActionPlans} options={{headerShown:false}}/>
     </Stack.Navigator>
   );
 }

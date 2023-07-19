@@ -1,71 +1,145 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { Dimensions } from 'react-native';
+
 import {
     Image,
+    Text,
     View,
     StyleSheet,
     SafeAreaView,
     TouchableOpacity
 } from "react-native";
 import Colors from "../../utils/Colors";
+import { Switch } from 'react-native-switch';
+import {
+    widthPercentageToDP as wp,
+    heightPercentageToDP as hp
+} from "react-native-responsive-screen";
 import ActivityLog from "../../components/ActivityLog";
 import CallCenter from "../../components/CallCenter";
+import { ScrollView } from "react-native-gesture-handler";
 import Realtor from "../../components/Realtor";
 import Scripts from "../../components/Scripts";
 const CallCenterWeb = () => {
     return (
 
-        <SafeAreaView style={{ backgroundColor: Colors.cream, height: "100%", width: "100%", }}>
-            <View style={{ width: "100%", height: 100, backgroundColor: Colors.PrimaryColor, justifyContent: 'space-between' }}>
-
-                <View style={{ flexDirection: 'row' }}>
-
-                </View>
-                <View style={{ flexDirection: 'row' }}>
-
-                </View>
-                <View style={{ flexDirection: 'row' }}>
-
-                </View>
-                <View style={{ flexDirection: 'row',width:'100%' }}>
-                    <View style={styles.headericons}>
-                        <TouchableOpacity >
-                            <Image
-                                style={{
-                                    height: 22,
-                                    width: 22,
-                                    marginLeft: 20,
-                                    resizeMode: "contain",
-                                    position: "relative",
-                                    left: 10,
-                                }}
-                                source={require("../../assets/images/notificationwhite.png")}
-                            ></Image>
-                        </TouchableOpacity>
-                        <View style={styles.maincalcov}>
-                            <TouchableOpacity onPress={() => { }}>
-                                <Image
-                                
-                                    style={{
-                                        height: 22,
-                                        width: 22,
-                                        marginLeft: 22,
-                                        resizeMode: "contain",
-                                        position: "relative",
-                                        tintColor:'white'
-                                    }}
-                                    source={require("../../assets/images/calender.png")}
-                                ></Image>
-
-                            </TouchableOpacity>
-
-                        </View>
+        <SafeAreaView style={{ backgroundColor: Colors.cream, width: "100%",height:'100%' }}>
+            <View
+                style={{
+                    paddingVertical: 4,
+                    width: "100%",
+                    flexDirection: "row",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    backgroundColor: Colors.PrimaryColor,
+                }}
+            >
+                <View
+                    style={{
+                        flexDirection: "row",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        marginLeft: 10,
+                    }}
+                >
+                    <Text style={{ fontSize: 19, color: Colors.white }}>In queue</Text>
+                    <View style={{ backgroundColor: Colors.white, height: 60, width: 60, alignItems: "center", justifyContent: "center", borderRadius: 5, marginLeft: 5 }}>
+                        <Image
+                            style={{
+                                height: 18,
+                                width: 18,
+                                resizeMode: "contain",
+                                tintColor: Colors.black,
+                                marginBottom: 3
+                            }}
+                            source={require("../../../assets/calling.png")}
+                        />
+                        <Text style={{ fontSize: 12, marginBottom: 3 }}>Phone</Text>
+                        <Text style={{ fontSize: 12, }}>0</Text>
+                    </View>
+                    <View style={{ backgroundColor: Colors.white, height: 60, width: 60, alignItems: "center", justifyContent: "center", borderRadius: 5, marginLeft: 5 }}>
+                        <Image
+                            style={{
+                                height: 18,
+                                width: 18,
+                                resizeMode: "contain",
+                                tintColor: Colors.black,
+                                marginBottom: 3
+                            }}
+                            source={require("../../../assets/blackchat.png")}
+                        />
+                        <Text style={{ fontSize: 12, marginBottom: 3 }}>Chat</Text>
+                        <Text style={{ fontSize: 12, color: "#6cbd44" }}>4</Text>
                     </View>
                 </View>
-
+                <Text
+                    style={{ fontSize: 19, fontWeight: "bold", color: Colors.white }}
+                >
+                    Call Center
+                </Text>
+                <View style={styles.threeiconmain}>
+                    <TouchableOpacity
+                        style={{
+                            flexDirection: "row",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            marginRight: 10,
+                        }}
+                    >
+                        <Image
+                            style={{
+                                height: 22,
+                                width: 22,
+                                resizeMode: "contain",
+                                tintColor: Colors.white,
+                            }}
+                            source={require("../../../assets/notificationwhite.png")}
+                        />
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        style={{
+                            flexDirection: "row",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            marginRight: 10,
+                        }}
+                    >
+                        <Image
+                            style={{
+                                height: 22,
+                                width: 22,
+                                resizeMode: "contain",
+                                tintColor: Colors.white,
+                            }}
+                            source={require("../../../assets/calendarwhite.png")}
+                        />
+                    </TouchableOpacity>
+                </View>
             </View>
-
-            <View style={{ backgroundColor: Colors.cream, height: "100%", alignContent: "center", justifyContent: "center", width: "100%", paddingTop: 0 }}>
-
+            <View
+                style={{
+                    paddingVertical: 12,
+                    width: "100%",
+                    flexDirection: "row",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    backgroundColor: Colors.white,
+                }}
+            >
+                <Text style={{ fontSize: 20, fontWeight: "bold" }}>Jessica</Text>
+                <Image
+                    style={{
+                        height: 18,
+                        width: 18,
+                        resizeMode: "contain",
+                        tintColor: Colors.black,
+                        position: "absolute",
+                        right: 19
+                    }}
+                    source={require("../../../assets/transectionhg.png")}
+                />
+            </View>
+            <View style={{ backgroundColor: Colors.cream, alignContent: "flex-start", justifyContent: "flex-start", width: "100%", paddingTop: 10 }}>
 
                 <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: 12, marginBottom: 12 }}>
                     <View style={{ marginHorizontal: 4 }}> <CallCenter /></View>
@@ -77,17 +151,20 @@ const CallCenterWeb = () => {
                     <View style={{ marginHorizontal: 4 }}><Scripts /></View>
 
                 </View>
-                <View style={{ width: "100%" }}>
+
+            </View>
+            <View style={{ position: "relative" }}>
+                <View style={{ height: 500, width: 400, backgroundColor: Colors.white, position: "absolute", bottom: 70, right: 10, borderRadius: 4 }}>
 
                 </View>
-            </View>
-            <TouchableOpacity style={styles.backiconcover}>
-                <Image
-                    style={styles.backimagenew}
-                    source={require("../../../assets/blackchat.png")}
-                ></Image>
+                <TouchableOpacity style={styles.backiconcover}>
+                    <Image
+                        style={styles.backimagenew}
+                        source={require("../../../assets/blackchat.png")}
+                    ></Image>
 
-            </TouchableOpacity>
+                </TouchableOpacity>
+            </View>
         </SafeAreaView>
 
 
@@ -95,11 +172,6 @@ const CallCenterWeb = () => {
 }
 export default CallCenterWeb;
 const styles = StyleSheet.create({
-  maincalcov: { position: "relative" },
-    headericons: { flexDirection: "row", alignItems: "center", paddingRight: 12 },
-    covermonth: { position: "absolute", backgroundColor: Colors.white, width: 100, top: 31, padding: 12 },
-    maincalcov: { position: "relative" },
-    maindate: { paddingBottom: 10, marginBottom: 10, borderBottomColor: Colors.gray, borderBottomWidth: 1 },
     backiconcover: {
         flexDirection: "row",
         justifyContent: "center",
@@ -110,10 +182,15 @@ const styles = StyleSheet.create({
         width: 45,
         borderRadius: 100,
         position: "absolute", bottom: 20, right: 10
+
     }, backimagenew: {
         height: 20,
         width: 20,
         resizeMode: "contain",
         tintColor: Colors.white
+    },
+    threeiconmain: {
+        flexDirection: "row",
+        alignItems: "center",
     },
 });
