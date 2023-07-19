@@ -35,6 +35,7 @@ import Favorites from "../container/SurfStats/Favorites";
 import SavedSearch from "../container/SurfStats/SavedSearch";
 import SearchCreteria from "../container/SurfStats/SearchCreteria";
 import CallCenterWeb from "../container/CallCenterWeb";
+import LeadFlow from "../container/LeadFlow/LeadFlow";
 const Stack = createStackNavigator();
 
 function StackNavigator() {
@@ -44,6 +45,7 @@ function StackNavigator() {
         cardStyle: { backgroundColor: Colors.PrimaryColor },
       }}
       options={{headerShown:false}}
+      // initialRouteName="LeadFlow"
 
     >
       <Stack.Screen name="Login" component={Login}  options={{headerShown:false}}/>
@@ -57,6 +59,7 @@ function StackNavigator() {
       <Stack.Screen name="AddProperties" component={AddProperties} options={{headerShown:false}}/>
       <Stack.Screen name="NewActivies" component={NewActivies} options={{headerShown:false}}/>
       <Stack.Screen name="TransactionDetails" component={TransactionDetails} options={{headerShown:false}}/>
+      <Stack.Screen name="LeadFlow" component={LeadFlow} options={{headerShown:false}}/>
 
       <Stack.Screen
         name="EditContactsDetails"

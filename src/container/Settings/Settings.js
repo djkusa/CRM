@@ -103,7 +103,7 @@ const Settings = () => {
   <View style={styles.leadcover}>
   <Text style={styles.leadheading}>Lead Distribution</Text> 
   <View style={styles.uppercover}>
-  <View style={styles.covermain}><Image style={styles.imagedes}source={require("../../../assets/leadsicon.png")}/><Text>Lead Flow</Text></View>
+ <TouchableOpacity  onPress={() => navigation.navigate("LeadFlow")}><View style={styles.covermain}><Image style={styles.imagedes}source={require("../../../assets/leadsicon.png")}/><Text>Lead Flow</Text></View></TouchableOpacity> 
   <View style={styles.covermain}><Image style={styles.imagedes}source={require("../../../assets/group-icon.png")}/><Text>Groups</Text></View>
   <View style={styles.covermain}><Image style={styles.imagedes}source={require("../../../assets/ponds-icon.png")}/><Text>Ponds</Text></View>
  </View>
