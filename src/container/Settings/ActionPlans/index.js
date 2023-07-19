@@ -206,7 +206,7 @@ const ActionPlans = () => {
                 </View>
 
             </View>
-            {/* Modal View ..*/}
+            {/* Modal View */}
             <View style={{ alignContent: "center", position: "relative", justifyContent: "center", }}>
                 <Modal
                     animationType="fade"
