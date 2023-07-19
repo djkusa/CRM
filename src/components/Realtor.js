@@ -103,8 +103,8 @@ const Realtor = () => {
                         <Image
                             style={{
                                 resizeMode: "contain",
-                                height: 80,
-                                width: 80,
+                                height:50,
+                                width: 50,
                             }}
                             source={require("../../assets/speed3/speed3.png")}
                         /></View>
@@ -142,6 +142,6 @@ const styles = StyleSheet.create({
    backgroundColor: Colors.white,
        // borderRadius: wp("2%"), // 2% border radius on different devices
 width:400,
-height:380,
+height:360,
     },
 });
