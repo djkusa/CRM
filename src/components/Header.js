@@ -8,7 +8,6 @@ import {
   ScrollView,
   FlatList,
   Modal,
-  Button,
   Platform,
 } from "react-native";
 import Colors from "../utils/Colors";
@@ -17,8 +16,6 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Calendar, CalendarTheme } from "react-native-calendars";
 import moment from "moment";
 import { Picker } from "@react-native-picker/picker";
-import { color } from "react-native-reanimated";
-import { Menu, MenuItem, MenuDivider } from 'react-native-material-menu';
 
 const activities = {
   "2023-06-01": [{ name: "Meeting", time: "10:00 AM" }],
