@@ -22,8 +22,7 @@ import Realtor from "../../components/Realtor";
 import Scripts from "../../components/Scripts";
 const CallCenterWeb = () => {
     return (
-
-        <SafeAreaView style={{ backgroundColor: Colors.cream, width: "100%",height:'100%' }}>
+<SafeAreaView style={{ backgroundColor: Colors.cream, width: "100%",height:'100%' }}>
             <View
                 style={{
                     paddingVertical: 4,
@@ -167,7 +166,6 @@ const CallCenterWeb = () => {
             </View>
         </SafeAreaView>
 
-
     );
 }
 export default CallCenterWeb;
@@ -182,6 +180,7 @@ const styles = StyleSheet.create({
         width: 45,
         borderRadius: 100,
         position: "absolute", bottom: 20, right: 10
+
 
     }, backimagenew: {
         height: 20,

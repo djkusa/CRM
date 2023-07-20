@@ -34,9 +34,8 @@ import EditClientsDetails from "../container/EditClientsDetails/EditClientsDetai
 import chat from "../container/chat";
 import TrasactionForm from "../container/TransactionDeskNew/TransactionForm";
 import AddContacts from "../container/AddContacts/AddContacts";
-import Scripts from "../components/Scripts";
-import Realtor from "../components/Realtor";
-import CallCenterWeb from "../container/CallCenterWeb/index";
+
+import LeadFlow from "../container/LeadFlow/LeadFlow";
 
 
 
@@ -110,8 +109,8 @@ const BottomTabNavigator = () => {
         }}
       />
       <Tab.Screen
-        name="TransactionDeskNew"
-        component={TransactionDeskNew}
+        name="LeadFlow"
+        component={LeadFlow}
         options={{
           tabBarLabel: (
             <Text style={{ fontSize: 11 }} allowFontScaling={false}>

@@ -141,6 +141,6 @@ const styles = StyleSheet.create({
         backgroundColor: Colors.white,
         // borderRadius: wp("2%"), // 2% border radius on different devices
         width:400,
-        height:380,
+        height:360,
     },
 });
