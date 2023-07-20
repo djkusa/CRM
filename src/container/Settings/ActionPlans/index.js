@@ -261,7 +261,6 @@ const ActionPlans = () => {
 
                                     </View>
 
-{/*  */}
                                     <View style={{ flexDirection: 'row', alignContent: 'center', marginBottom: 15 }}>
                                         <Checkbox
                                             style={[styles.checkbox, { marginLeft: -1, marginTop: 0 }]}

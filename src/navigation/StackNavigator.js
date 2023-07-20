@@ -33,6 +33,7 @@ import TransactionDesk from "../container/TransactionDesk/TransactionDesk";
 import Favorites from "../container/SurfStats/Favorites";
 import SavedSearch from "../container/SurfStats/SavedSearch";
 import SearchCreteria from "../container/SurfStats/SearchCreteria";
+import ActionPlans from "../container/Settings/ActionPlans";
 const Stack = createStackNavigator();
 
 function StackNavigator() {
@@ -45,6 +46,7 @@ function StackNavigator() {
 
     >
       <Stack.Screen name="Login" component={Login}  options={{headerShown:false}}/>
+      <Stack.Screen name="ActionPlans" component={ActionPlans}  options={{headerShown:false}}/>
       <Stack.Screen name="AccessRequest" component={AccessRequest} options={{headerShown:false}}/>
       <Stack.Screen name="AccessRequestSent" component={AccessRequestSent} options={{headerShown:false}}/>
       <Stack.Screen name="EnterPin" component={EnterPin} options={{headerShown:false}}/>
