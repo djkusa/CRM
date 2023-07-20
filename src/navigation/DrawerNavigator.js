@@ -29,6 +29,9 @@ import PropertiesFavorites from "../container/PropertiesFavorites/PropertiesFavo
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { ScrollView } from "react-native-gesture-handler";
 import Contact from "../container/Contact/Contact";
+//i//mport Realtor from "../components/Realtor";
+
+
 
 const data = [
   // {
@@ -230,6 +233,7 @@ const CustomDrawerContent = () => {
 
   const handlePress = () => {
     setIsPressed(!isPressed);
+    navigation.navigate('CallCenterWeb')
   };
   const handlePress1 = () => {
     setIsPressed1(!isPressed1);

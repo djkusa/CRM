@@ -455,7 +455,6 @@ const AddContacts = () => {
                 mode="datetime"
                 onConfirm={handleConfirm}
                 onCancel={hideDatePicker}
-                
               />
             </View>
           </View>

@@ -32,6 +32,13 @@ import SearchCreteria from "../container/SurfStats/SearchCreteria";
 import PropertiesDetails from "../container/PropertiesDetails/PropertiesDetails";
 import EditClientsDetails from "../container/EditClientsDetails/EditClientsDetails";
 import chat from "../container/chat";
+import TrasactionForm from "../container/TransactionDeskNew/TransactionForm";
+import AddContacts from "../container/AddContacts/AddContacts";
+import Scripts from "../components/Scripts";
+import Realtor from "../components/Realtor";
+import CallCenterWeb from "../container/CallCenterWeb/index";
+
+
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -104,7 +111,7 @@ const BottomTabNavigator = () => {
       />
       <Tab.Screen
         name="TransactionDeskNew"
-        component={TransactionStackScreen}
+        component={TransactionDeskNew}
         options={{
           tabBarLabel: (
             <Text style={{ fontSize: 11 }} allowFontScaling={false}>
@@ -251,6 +258,7 @@ function TransactionStackScreen() {
     <TransactionStack.Navigator>
       <TransactionStack.Screen name="TransactionDeskNew" component={TransactionDeskNew} options={{headerShown:false}} />
       <TransactionStack.Screen name="TransactionDesk" component={TransactionDesk} options={{headerShown:false}}/>
+      <TransactionStack.Screen name="TrasactionForm" component={TrasactionForm} options={{headerShown:false}}/>
     </TransactionStack.Navigator>
   );
 }
@@ -259,6 +267,7 @@ function ContactStackScreen() {
   return (
     <ContactStack.Navigator>
       <ContactStack.Screen name="Contact" component={Contact} options={{headerShown:false}} />
+      <ContactStack.Screen name="AddContacts" component={AddContacts} options={{headerShown:false}}/>
       <ContactStack.Screen name="MyClientsDetails" component={MyClientsDetails} options={{headerShown:false}}/>
       <ContactStack.Screen name="SurfStats" component={SurfStats} options={{headerShown:false}}/>
       <ContactStack.Screen name="Favorites" component={Favorites} options={{headerShown:false}}/>

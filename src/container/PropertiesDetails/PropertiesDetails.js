@@ -176,8 +176,15 @@ const PropertiesDetails = (props) => {
                 justifyContent: "center",
                 marginTop: 20,
               }}
-            >
-             
+            > 
+              <View
+                style={{
+                  height: 250,
+                  width: "100%",
+                }}
+              >
+               
+              </View>
               <MapView
                 provider={PROVIDER_GOOGLE}
                 style={{

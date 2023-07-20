@@ -25,6 +25,7 @@ import EditActivity from "../container/EditActivity/EditActivity";
 import NewActivies from "../container/Transactions/NewActivies";
 import TransactionDetails from "../container/Transactions/TransactionDetails";
 import Leads from "../container/Leads/Leads";
+import Realtor from "../components/Realtor";
 import DisPosition from "../container/DisPosition/DisPosition";
 import SingleClientDetail from "../container/SingleClientDetail/SingleClientDetail";
 import SurfStats from "../container/SurfStats/SurfStats";
@@ -34,6 +35,7 @@ import Favorites from "../container/SurfStats/Favorites";
 import SavedSearch from "../container/SurfStats/SavedSearch";
 import SearchCreteria from "../container/SurfStats/SearchCreteria";
 import PropertyDetailWeb from "../container/Properties/PropertyDetailWeb";
+import CallCenterWeb from "../container/CallCenterWeb";
 const Stack = createStackNavigator();
 
 function StackNavigator() {
@@ -76,11 +78,13 @@ function StackNavigator() {
       <Stack.Screen name="DisPosition" component={DisPosition} options={{headerShown:false}}/>
       <Stack.Screen name="SingleClientDetail" component={SingleClientDetail} options={{headerShown:false}}/>
       <Stack.Screen name="Settings" component={Settings} options={{headerShown:false}}/>
+      
       <Stack.Screen
         name="PropertiesViewedByLeads"
         component={PropertiesViewedByLeads}
         options={{headerShown:false}}
       />
+      <Stack.Screen name="Realtor" component={Realtor} options={{headerShown:false}}/>
       
       <Stack.Screen name="PropertiesViewed" component={PropertiesViewed} options={{headerShown:false}}/>
       <Stack.Screen name="PropertyDetailWeb" component={PropertyDetailWeb} options={{headerShown:false}}/>
@@ -90,6 +94,7 @@ function StackNavigator() {
       <Stack.Screen name="SearchCreteria" component={SearchCreteria} options={{headerShown:false}}/>
       <Stack.Screen name="TransactionDesk" component={TransactionDesk} options={{headerShown:false}}/>
       <Stack.Screen name="SurfStats" component={SurfStats} options={{headerShown:false}}/>
+      <Stack.Screen name="CallCenterWeb" component={CallCenterWeb} options={{headerShown:false}}/>
     </Stack.Navigator>
   );
 }

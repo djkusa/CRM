@@ -9,6 +9,7 @@ const Colors = {
   lightblack: "#8d8a8a",
   black:"#000",
   darkblue:"#274dac",
-  borderlightcolor:"#e5e5e536"
+  borderlightcolor:"#e5e5e536",
+  placeHolderTextColor:'#8f8f8f'
 };
 export default Colors;
