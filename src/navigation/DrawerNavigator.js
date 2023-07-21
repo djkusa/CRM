@@ -314,7 +314,8 @@ const CustomDrawerContent = () => {
             }}
           >
             {userData.display_name}
-          </Text></TouchableOpacity>
+          </Text>
+          </TouchableOpacity>
         <TouchableOpacity onPress={() => {Platform.OS === 'web' ? navigation.navigate('Settings') : null}}>
           <Image
               source={require("../../assets/setting-icons.png")}

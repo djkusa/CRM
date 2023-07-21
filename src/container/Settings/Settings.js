@@ -103,21 +103,31 @@ const Settings = () => {
           <View style={styles.leadcover}>
             <Text style={styles.leadheading}>Lead Distribution</Text>
             <View style={styles.uppercover}>
-              <View style={styles.covermain}><Image style={styles.imagedes} source={require("../../../assets/leadsicon.png")} /><Text>Lead Flow</Text></View>
-              <View style={styles.covermain}><Image style={styles.imagedes} source={require("../../../assets/group-icon.png")} /><Text>Groups</Text></View>
-              <View style={styles.covermain}><Image style={styles.imagedes} source={require("../../../assets/ponds-icon.png")} /><Text>Ponds</Text></View>
+              <TouchableOpacity onPress={() => { navigation.navigate('LeadFlow') }}>
+                <View style={styles.covermain}><Image style={styles.imagedes} source={require("../../../assets/leadsicon.png")} /><Text>Lead Flow</Text></View>
+
+              </TouchableOpacity>
+              <TouchableOpacity onPress={() => { navigation.navigate('Groups') }}>
+                <View style={styles.covermain}><Image style={styles.imagedes} source={require("../../../assets/group-icon.png")} /><Text>Groups</Text></View>
+              </TouchableOpacity>
+              <TouchableOpacity onPress={() => { navigation.navigate('Ponds') }}>
+                <View style={styles.covermain}><Image style={styles.imagedes} source={require("../../../assets/ponds-icon.png")} /><Text>Ponds</Text></View>
+
+              </TouchableOpacity>
             </View>
           </View>
 
           <View style={styles.leadcover}>
             <Text style={styles.leadheading}>Follow Up</Text>
             <View style={styles.uppercover}>
-              <TouchableOpacity onPress={()=>{navigation.navigate('ActionPlans')}}>
+              <TouchableOpacity onPress={() => { navigation.navigate('ActionPlans') }}>
                 <View style={styles.covermain}><Image style={styles.imagedes} source={require("../../../assets/action-plans.png")} /><Text>Action Plans </Text></View>
 
               </TouchableOpacity>
               <View style={styles.covermain}><Image style={styles.imagedes} source={require("../../../assets/automation-icon.png")} /><Text>Automations</Text></View>
+                  <TouchableOpacity onPress={()=>{navigation.navigate('EmailTemplate')}}>
               <View style={styles.covermain}><Image style={styles.imagedes} source={require("../../../assets/email-icon.png")} /><Text>Email Templates</Text></View>
+                  </TouchableOpacity>
               <View style={styles.covermain}><Image style={styles.imagedes} source={require("../../../assets/text-icon.png")} /><Text>Text Templates</Text></View>
             </View>
           </View>

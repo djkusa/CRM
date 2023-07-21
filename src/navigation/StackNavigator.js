@@ -38,6 +38,9 @@ import ActionPlans from "../container/Settings/ActionPlans";
 
 import CallCenterWeb from "../container/CallCenterWeb";
 import LeadFlow from "../container/LeadFlow/LeadFlow";
+import Groups from "../container/Settings/Groups";
+import Ponds from "../container/Settings/Ponds";
+import EmailTemplate from "../container/Settings/EmailTemplate";
 
 const Stack = createStackNavigator();
 
@@ -48,11 +51,15 @@ function StackNavigator() {
         cardStyle: { backgroundColor: Colors.PrimaryColor },
       }}
       options={{headerShown:false}}
-      // initialRouteName="LeadFlow"
+      //  initialRouteName="EmailTemplate"
 
     >
       <Stack.Screen name="Login" component={Login}  options={{headerShown:false}}/>
       <Stack.Screen name="ActionPlans" component={ActionPlans}  options={{headerShown:false}}/>
+      <Stack.Screen name="Ponds" component={Ponds}  options={{headerShown:false}}/>
+      <Stack.Screen name="EmailTemplate" component={EmailTemplate}  options={{headerShown:false}}/>
+      <Stack.Screen name="Groups" component={Groups}  options={{headerShown:false}}/>
+      <Stack.Screen name="CallCenterWeb" component={CallCenterWeb}  options={{headerShown:false}}/>
       <Stack.Screen name="AccessRequest" component={AccessRequest} options={{headerShown:false}}/>
       <Stack.Screen name="AccessRequestSent" component={AccessRequestSent} options={{headerShown:false}}/>
       <Stack.Screen name="EnterPin" component={EnterPin} options={{headerShown:false}}/>

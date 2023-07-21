@@ -20,7 +20,11 @@ import CallCenter from "../../components/CallCenter";
 import { ScrollView } from "react-native-gesture-handler";
 import Realtor from "../../components/Realtor";
 import Scripts from "../../components/Scripts";
+import { useNavigation } from "@react-navigation/native";
+
 const CallCenterWeb = () => {
+  const navigation = useNavigation();
+
     return (
 <SafeAreaView style={{ backgroundColor: Colors.cream, width: "100%",height:'100%' }}>
             <View
@@ -41,6 +45,9 @@ const CallCenterWeb = () => {
                         marginLeft: 10,
                     }}
                 >
+                    <TouchableOpacity onPress={()=>{navigation.goBack()}}>
+                    <Image style={{height:24,width:12,marginRight:16,tintColor:'white'}} source={require('../../assets/images/back.png')}></Image>
+                    </TouchableOpacity>
                     <Text style={{ fontSize: 19, color: Colors.white }}>In queue</Text>
                     <View style={{ backgroundColor: Colors.white, height: 60, width: 60, alignItems: "center", justifyContent: "center", borderRadius: 5, marginLeft: 5 }}>
                         <Image
